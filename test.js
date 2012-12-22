@@ -6,7 +6,7 @@ tox.setOptions({
   path: 'test/pages',
   viewFile: 'page.html',
   viewFiles: {
-    'about': 'about.html'
+    'about/*': 'about.html'
   },
   debug: true
 });
