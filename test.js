@@ -4,7 +4,11 @@ var express = require('express')
   
 tox.setOptions({
   path: 'test/pages',
-  viewFile: 'page.html'
+  viewFile: 'page.html',
+  viewFiles: {
+    'about': 'about.html'
+  },
+  debug: true
 });
 
 app.engine('html', require('ejs').renderFile);
@@ -25,5 +29,12 @@ urls:
   - /about => about.md
   - /about/contact -> about/contact
   - 404 -> 404.md
+  
+tox.setOptions({
+  viewFile: {
+    'about/contact': 'about.html',
+    default:
+  }
+});
   
 */
