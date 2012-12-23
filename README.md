@@ -9,7 +9,8 @@ This example is using Express 3.
 var express = require('express')
   , app = express()
   , tox = require('tox');
-  
+ 
+// Or what you like to use for views
 app.engine('html', require('els').renderFile);
 app.set('views', './site/views')
 
@@ -50,7 +51,7 @@ http.createServer(function (req, res) {
 #### Express related options
 
 * `viewFile` - The default view file to use.
-* `viewFiles` - Change view files depending on route. Use `/*` if every page under will use the same view file instead of the `viewFile`.
+* `viewFiles` - Change view files depending on route. Use `/*` if every child page will use the same view file instead of the `viewFile`.
 
 ```
 viewFiles: {
