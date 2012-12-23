@@ -17,7 +17,7 @@ tox.setOptions({
 });
 
 app.get('/*', function (req, res, next) {
-  res.send(tox.page(''));
+  res.send(tox.page());
 });
 
 app.listen(4000);
