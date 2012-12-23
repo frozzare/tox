@@ -1,6 +1,6 @@
 var express = require('express')
   , app = express()
-  , tox = require('./lib/tox');
+  , tox = require('../lib/tox');
 
 // Set view engine and directory
 app.engine('html', require('ejs').renderFile);
@@ -12,9 +12,12 @@ tox.setOptions({
   viewFile: 'page.html',
   viewFiles: {
     'about/*': 'about.html'
-  }
+  },
+  debug: true
 });
 
-app.get('/*', tox.page);
+app.get('/*', function (req, res, next) {
+  res.send(tox.page(''));
+});
 
 app.listen(4000);
