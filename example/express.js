@@ -4,13 +4,14 @@ var express = require('express')
 
 app.engine('html', require('ejs').renderFile);
 app.set('views', './site/views')
+app.set('view engine', 'html');
   
 // Set tox options
 tox.setOptions({
   path: 'site/pages',
-  viewFile: 'page.html',
+  viewFile: 'page',
   viewFiles: {
-    'about/*': 'about.html'
+    'about/*': 'about'
   }
 });
 

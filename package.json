@@ -2,7 +2,7 @@
   "name": "tox",
   "version": "0.1.0",
   "author": "Fredrik Forsmo <fredrik.forsmo@gmail.com>",
-  "description": "Serv markdown files as webpages dead simple",
+  "description": "Serve markdown files as web pages",
   "main": "./lib/tox",
   "repository": {
     "type": "git",
@@ -10,8 +10,8 @@
   },
   "keywords": [
     "markdown",
-    "server",
-    "http"
+    "http",
+    "yaml"
   ],
   "dependencies": {
     "express": "3.0.0",
