@@ -24,7 +24,7 @@ app.listen(4000);
 ```
 
 ## Tox without Express
-This example is using the standard http server. `tox.page` will return an object containg all yaml options and the `tox` property containg the html code.
+This example is using the standard http server. `tox.page` will return an object containg all yaml properties and the `tox` property containg the html code.
 
 ```
 var http = require('http')
