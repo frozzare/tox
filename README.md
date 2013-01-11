@@ -11,7 +11,7 @@ var express = require('express')
   , tox = require('tox');
  
 // Or what you like to use for views
-app.engine('html', require('els').renderFile);
+app.engine('html', require('ejs').renderFile);
 app.set('views', 'path/to/views')
 
 tox.setOptions({
