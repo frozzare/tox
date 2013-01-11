@@ -35,8 +35,8 @@ tox.setOptions({
 });
 
 http.createServer(function (req, res) {
-	res.writeHead(200, {'Content-Type': 'text/html'});
-	res.end(tox.page(req.url).tox);
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.end(tox.page(req.url).tox);
 }).listen(4000);
 ```
 
@@ -54,10 +54,12 @@ http.createServer(function (req, res) {
 * `viewFiles` - Change view files depending on route. Use `/*` if every child page will use the same view file instead of the `viewFile`.
 
 ```javascript
-viewFiles: {
-	'about' : 'about.html',
-	'page/*': 'page.html'
-}
+tox.setOptions({
+  viewFiles: {
+	  'about' : 'about',
+	  'page/*': 'page'
+  }
+});
 ```
 
 ## Running tests
