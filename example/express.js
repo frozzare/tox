@@ -3,7 +3,7 @@ var express = require('express')
   , tox = require('../lib/tox');
 
 app.engine('html', require('ejs').renderFile);
-app.set('views', './site/views')
+app.set('views', 'site/views')
 app.set('view engine', 'html');
 
 // Set tox options

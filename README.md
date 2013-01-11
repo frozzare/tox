@@ -12,10 +12,10 @@ var express = require('express')
  
 // Or what you like to use for views
 app.engine('html', require('els').renderFile);
-app.set('views', './site/views')
+app.set('views', 'path/to/views')
 
 tox.setOptions({
-  path: 'path/to/markdown/files'
+  path: 'path/to/markdowns'
 });
 
 app.get('/*', tox.page);
