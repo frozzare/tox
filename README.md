@@ -2,6 +2,10 @@
 
 With Tox you can create websites with markdown files. All your content will be stored in the markdown files you create. Tox is design to work with [Express](http://expressjs.com), but it will work with any web framework. Supporting yaml inside three dashes `---` section at the start and at the end in the header of the markdown file.
 
+```
+npm install tox
+```
+
 ## Tox with Express
 
 This example is using Express 3.
@@ -15,9 +19,7 @@ var express = require('express')
 app.engine('html', require('ejs').renderFile);
 app.set('views', 'path/to/views')
 
-tox.setOptions({
-  path: 'path/to/markdowns'
-});
+tox.set('path', 'path/to/markdowns');
 
 app.get('/*', tox.page);
 
@@ -32,9 +34,7 @@ This example is using the standard http server. `tox.page` will return an object
 var http = require('http')
   , tox = require('tox');
   
-tox.setOptions({
-  path: 'path/to/markdown/files'
-});
+tox.set('path', 'path/to/markdown/files');
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
@@ -43,6 +43,8 @@ http.createServer(function (req, res) {
 ```
 
 ## Options
+
+`tox.set` can take an object with options or key/value argument.
 
 * `path` - Set the path where the markdown files is stored
 * `startPage` - Filename of the start page file without extension. Default `index`.
@@ -56,7 +58,7 @@ http.createServer(function (req, res) {
 * `viewFiles` - Change view files depending on route. Use `/*` if every child page will use the same view file instead of the `viewFile`.
 
 ```javascript
-tox.setOptions({
+tox.set({
   viewFiles: {
 	  'about' : 'about',
 	  'page/*': 'page'

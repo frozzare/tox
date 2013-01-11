@@ -7,7 +7,7 @@ app.set('views', 'site/views')
 app.set('view engine', 'html');
 
 // Set tox options
-tox.setOptions({
+tox.set({
   path: 'site/pages',
   viewFile: 'page',
   viewFiles: {
