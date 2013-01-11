@@ -3,6 +3,7 @@
 With Tox you can create websites with markdown files. All your content will be stored in the markdown files you create. Tox is design to work with [Express](http://expressjs.com), but it will work with any web framework. Supporting yaml inside three dashes `---` section at the start and at the end in the header of the markdown file.
 
 ## Tox with Express
+
 This example is using Express 3.
 
 ```javascript
@@ -24,6 +25,7 @@ app.listen(4000);
 ```
 
 ## Tox without Express
+
 This example is using the standard http server. `tox.page` will return an object containing all yaml properties and the `tox` property containing the html code.
 
 ```javascript
@@ -68,7 +70,6 @@ tox.setOptions({
 npm install
 make
 ```
-
 
 ## License 
 
