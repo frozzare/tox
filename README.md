@@ -44,7 +44,7 @@ http.createServer(function (req, res) {
 
 ## Options
 
-`tox.set` can take an object with options or key/value argument. You can get option via `tox.get(key)`.
+`tox.set(obj,` can take an object with options or key/value argument. You can get option via `tox.get(key)`.
 
 * `path` - Set the path where the markdown files is stored
 * `startPage` - Filename of the start page file without extension. Default `index`.
