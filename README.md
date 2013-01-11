@@ -24,7 +24,7 @@ app.listen(4000);
 ```
 
 ## Tox without Express
-This example is using the standard http server. `tox.page` will return an object containg all yaml properties and the `tox` property containg the html code.
+This example is using the standard http server. `tox.page` will return an object containing all yaml properties and the `tox` property containing the html code.
 
 ```
 var http = require('http')
@@ -46,7 +46,7 @@ http.createServer(function (req, res) {
 * `startPage` - Filename of the start page file without extension. Default `index`.
 * `ext` - Set file extension. Default `md`.
 * `notFound` - Filename of the not found file wihtout extension. Default `404`.
-* `exclude` - Array containg filenames to exclude.
+* `exclude` - Array containing filenames to exclude.
 
 #### Express related options
 
