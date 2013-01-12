@@ -1,6 +1,8 @@
 # Tox
 
-With Tox you can create websites with markdown files. All your content will be stored in the markdown files you create. Tox is design to work with [Express](http://expressjs.com), but it will work with any web framework. Supporting yaml inside three dashes `---` section at the start and at the end in the header of the markdown file.
+With Tox you can create node.js websites with markdown files. All your content will be stored in the markdown files you create. Tox is design to work with [Express](http://expressjs.com), but it will work without a framework and also with any other node.js web framework. It supports yaml inside three dashes `---` section at the start and at the end in the header of the markdown file.
+
+## Install Tox
 
 ```
 npm install tox
@@ -28,7 +30,7 @@ app.listen(4000);
 
 ## Tox without Express
 
-This example is using the standard http server. `tox.page` will return an object containing all yaml properties and the `tox` property containing the html code.
+This example is using the standard node http server. `tox.page` will return an object containing all yaml properties and the `tox` property containing the html code.
 
 ```javascript
 var http = require('http')
@@ -44,12 +46,12 @@ http.createServer(function (req, res) {
 
 ## Options
 
-`tox.set(obj,` can take an object with options or key/value argument. You can get option via `tox.get(key)`.
+`tox.set(obj)` can take an object with options or key/value argument. You can get option via `tox.get(key)`.
 
 * `path` - Set the path where the markdown files is stored
 * `startPage` - Filename of the start page file without extension. Default `index`.
 * `ext` - Set file extension. Default `md`.
-* `notFound` - Filename of the not found file wihtout extension. Default `404`.
+* `notFound` - Filename of the not found file without extension. Default `404`.
 * `exclude` - Array containing filenames to exclude.
 
 #### Express related options
