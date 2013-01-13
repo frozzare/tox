@@ -23,7 +23,7 @@ app.set('view engine', 'html');
 
 // Set tox options
 tox.set({
-  path: 'path/to/pages',
+  path: 'path/to/markdown',
   viewFile: 'page'
 });
 
@@ -40,7 +40,7 @@ This example is using the standard node http server. `tox.page` will return an o
 var http = require('http')
   , tox = require('tox');
   
-tox.set('path', 'path/to/markdown/files');
+tox.set('path', 'path/to/markdown');
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
