@@ -15,13 +15,17 @@ This example is using Express 3.
 ```javascript
 var express = require('express')
   , app = express()
-  , tox = require('tox');
- 
-// Or what you like to use for views
+  , fox = require('fox');
+
 app.engine('html', require('ejs').renderFile);
 app.set('views', 'path/to/views')
+app.set('view engine', 'html');
 
-tox.set('path', 'path/to/markdowns');
+// Set fox options
+tox.set({
+  path: 'path/to/pages',
+  viewFile: 'page'
+});
 
 app.get('/*', tox.page);
 
